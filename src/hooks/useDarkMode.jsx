@@ -1,43 +1,43 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 const useLocalStorage = (key, initialValue) => {
   const [storedValue, setStoredValue] = useState(() => {
     try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
+      const item = window.localStorage.getItem(key)
+      return item ? JSON.parse(item) : initialValue
     } catch (error) {
-      console.log(error);
-      return initialValue;
+      console.log(error)
+      return initialValue
     }
-  });
+  })
 
   const setValue = (value) => {
     try {
       const valueToStore =
-        value instanceof Function ? value(storedValue) : value;
+        value instanceof Function ? value(storedValue) : value
 
-      setStoredValue(valueToStore);
+      setStoredValue(valueToStore)
 
-      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+      window.localStorage.setItem(key, JSON.stringify(valueToStore))
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  };
-  return [storedValue, setValue];
-};
+  }
+  return [storedValue, setValue]
+}
 
 const useDarkMode = () => {
-  const [enabledState, setEnabledState] = useLocalStorage("dark-theme", true);
-  const isEnabled = typeof enabledState === "undefined" ? true : enabledState;
+  const [enabledState, setEnabledState] = useLocalStorage('dark-theme', true)
+  const isEnabled = typeof enabledState === 'undefined' ? true : enabledState
 
   useEffect(() => {
-    const className = "dark";
-    const bodyClass = window.document.body.classList;
+    const className = 'dark'
+    const bodyClass = window.document.body.classList
 
-    isEnabled ? bodyClass.add(className) : bodyClass.remove(className);
-  }, [isEnabled]);
+    isEnabled ? bodyClass.add(className) : bodyClass.remove(className)
+  }, [isEnabled])
 
-  return [enabledState, setEnabledState];
-};
+  return [enabledState, setEnabledState]
+}
 
-export default useDarkMode;
+export default useDarkMode
