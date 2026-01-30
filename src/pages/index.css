@@ -16,6 +16,9 @@
   .hero__heading {
     @apply text-5xl text-primary relative sm:text-7xl md:text-9xl dark:text-white;
   }
+  .font-geoochi {
+    font-family: 'Comic Sans MS', 'Helvetica Neue', 'Microsoft Yahei', -apple-system, sans-serif !important;
+  }
 
   .hero__heading::before {
     @apply text-xs text-primary-400 absolute -top-6 -left-2 sm:text-base dark:text-opacity-80 dark:text-white;
