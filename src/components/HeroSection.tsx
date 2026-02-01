@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
       <div className='container relative'>
         <div className='flex items-center flex-col'>
           <div className='flex flex-col items-center justify-center min-h-[90vh] md:min-h-screen'>
-            <h1 className='hero__heading'>Geoo Chi</h1>
+            <h1 className='hero__heading font-geoochi'>Geoo Chi</h1>
           </div>
         </div>
         <div className='w-full relative bottom-20 md:w-auto md:absolute md:top-[70%]'>

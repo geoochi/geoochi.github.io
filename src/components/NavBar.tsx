@@ -1,5 +1,4 @@
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
-import images from '@/constants'
 import useTheme from '@/hooks/use-theme'
 
 const NavBar: React.FC = () => {
@@ -10,14 +9,17 @@ const NavBar: React.FC = () => {
       <div className='container'>
         <div className='flex justify-between items-center px-0 py-4 gap-4 sm:px-6 lg:py-8 lg:gap-10'>
           <a href='#home'>
-            <img className='h-12 w-auto' src={theme === 'dark' ? images.LogoDark : images.LogoLight} alt='brand icon' height={12} width={245} />
+            <span className='h-12 w-auto font-geoochi'>Geoo Chi</span>
           </a>
           <div className='flex items-center gap-8'>
-            <a href='https://geoochi.github.io/blog' target={'_blank'} className='text-2xl transition-opacity dark:text-white'>
+            <a href='/blog/' target={'_blank'} className='text-2xl transition-opacity dark:text-white'>
               Blog
             </a>
-            <a href='https://geoochi.github.io/gallery' target={'_blank'} className='text-2xl transition-opacity dark:text-white'>
+            <a href='/gallery/' target={'_blank'} className='text-2xl transition-opacity dark:text-white'>
               Gallery
+            </a>
+            <a href='/log/' target={'_blank'} className='text-2xl transition-opacity dark:text-white'>
+              Log
             </a>
             <div className='text-primary dark:text-white' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
               {theme === 'dark' ? (

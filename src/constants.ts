@@ -7,8 +7,6 @@ import VideoUltraQR from '@/assets/demos/ultraqr.codes.mp4'
 import VideoStereoVerify from '@/assets/demos/stereo-verify.mp4'
 import VideoFormulaFormatter from '@/assets/demos/formula-formatter.mp4'
 
-import LogoLight from '@/assets/logo/logo-light.webp'
-import LogoDark from '@/assets/logo/logo-dark.webp'
 import LogoGithub from '@/assets/logo/github.svg'
 import LogoX from '@/assets/logo/x.svg'
 import LogoNextJS from '@/assets/logo/nextjs.svg'
@@ -32,8 +30,6 @@ export default {
   VideoUltraQR,
   VideoStereoVerify,
   VideoFormulaFormatter,
-  LogoLight,
-  LogoDark,
   LogoGithub,
   LogoX,
   LogoNextJS,
