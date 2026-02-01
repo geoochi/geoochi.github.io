@@ -18,7 +18,7 @@ const NavBar: React.FC = () => {
             <a href='/gallery/' target={'_blank'} className='text-2xl transition-opacity dark:text-white'>
               Gallery
             </a>
-            <a href='/log/' target={'_blank'} className='text-2xl transition-opacity dark:text-white'>
+            <a href='/log-visualize/' target={'_blank'} className='text-2xl transition-opacity dark:text-white'>
               Log
             </a>
             <div className='text-primary dark:text-white' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
