@@ -12,16 +12,24 @@ const NavBar: React.FC = () => {
             <span className='h-12 w-auto font-geoochi'>Geoo Chi</span>
           </a>
           <div className='flex items-center gap-8'>
-            <a href='/blog/' target={'_blank'} className='text-2xl transition-opacity dark:text-white'>
+            <a
+              href='/blog/'
+              target={'_blank'}
+              className='text-2xl transition-opacity dark:text-white'
+            >
               Blog
             </a>
-            <a href='/gallery/' target={'_blank'} className='text-2xl transition-opacity dark:text-white'>
+            <a
+              href='/gallery/'
+              target={'_blank'}
+              className='text-2xl transition-opacity dark:text-white'
+            >
               Gallery
             </a>
-            <a href='/log-visualize/' target={'_blank'} className='text-2xl transition-opacity dark:text-white'>
-              Log
-            </a>
-            <div className='text-primary dark:text-white' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+            <div
+              className='text-primary dark:text-white'
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            >
               {theme === 'dark' ? (
                 <MoonIcon className='h-6 w-6 cursor-pointer opacity-100' />
               ) : (
