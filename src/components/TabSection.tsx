@@ -1,7 +1,8 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import images from '@/constants'
 
-const logos = [
+const logos: { image: string; title: string; span?: boolean }[] = [
+  { image: images.LogoAgent, title: 'AI Agent', span: true },
   { image: images.LogoHtml, title: 'HTML5' },
   { image: images.LogoCss, title: 'CSS3' },
   { image: images.LogoJavascript, title: 'JavaScript' },
@@ -29,11 +30,12 @@ const TabSection: React.FC = () => {
         <TabPanel className='flex gap-20 items-center flex-col-reverse md:flex-row-reverse transition-all'>
           <div className='w-full text-primary md:w-1/2 dark:text-white'>
             <h2 className='text-2xl font-semibold mb-2'>
-              Full Stack | Python | OpenCV Developer
+              Full Stack | Python | OpenCV | AI Agent Developer
             </h2>
             <p className='text-base font-normal text-neutral-700 dark:text-neutral-300'>
               Full Stack freelance, love to code some webpage or python
-              algorithm demos
+              algorithm demos. Most of it now gets built with AI agents, and
+              increasingly the tools themselves are agent-powered.
             </p>
             <br />
           </div>
@@ -49,12 +51,12 @@ const TabSection: React.FC = () => {
           </div>
         </TabPanel>
         <TabPanel className='flex gap-20 items-center flex-col md:flex-row-reverse transition-all'>
-          <div className='w-full text-center text-white max-w-3xl mx-auto md:h-[450px]'>
-            <div className='mt-6 grid grid-cols-2 gap-4 md:grid-cols-4 lg:mt-8'>
+          <div className='w-full text-center text-white max-w-3xl mx-auto md:min-h-[450px]'>
+            <div className='mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:mt-8'>
               {logos.map((logo, index) => (
                 <div
                   key={index}
-                  className='flex flex-col justify-center items-center gap-4 py-8 px-8 bg-gray-50 rounded-xl filter shadow-md dark:bg-primary-400'
+                  className={`flex flex-col justify-center items-center gap-4 py-8 px-8 bg-gray-50 rounded-xl filter shadow-md dark:bg-primary-400 ${logo.span ? 'col-span-2 md:col-span-1' : ''}`}
                 >
                   <img
                     className='h-14 object-contain dark:filter dark:invert'
