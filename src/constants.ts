@@ -25,6 +25,7 @@ import LogoOpencv from '@/assets/logo/opencv.svg'
 import LogoFfmpeg from '@/assets/logo/ffmpeg.svg'
 import LogoGo from '@/assets/logo/go.svg'
 import LogoQt from '@/assets/logo/qt.svg'
+import LogoAgent from '@/assets/logo/agent.svg'
 
 export default {
   ImageGeooChi,
@@ -52,4 +53,5 @@ export default {
   LogoFfmpeg,
   LogoGo,
   LogoQt,
+  LogoAgent,
 }

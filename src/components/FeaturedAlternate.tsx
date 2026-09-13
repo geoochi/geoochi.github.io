@@ -21,6 +21,7 @@ type Demo = {
   opencv?: boolean
   ffmpeg?: boolean
   qt?: boolean
+  agent?: boolean
 }
 
 const demos: Demo[] = [
@@ -32,6 +33,7 @@ const demos: Demo[] = [
     githubLink: 'https://github.com/geoochi/localctl',
     go: true,
     react: true,
+    agent: true,
   },
   {
     video: assets.VideoDoubaoAsr,
@@ -40,6 +42,7 @@ const demos: Demo[] = [
       'Hotkey dictation on Omarchy / Hyprland with Doubao ASR: press to talk, press again to stop, and the text is typed straight into the focused window',
     githubLink: 'https://github.com/geoochi/omarchy-doubao-asr',
     go: true,
+    agent: true,
   },
   {
     video: assets.VideoThemeSync,
@@ -48,6 +51,7 @@ const demos: Demo[] = [
       'Switch between a light and a dark Omarchy theme on a local-time schedule, with a bar button that cycles Auto / Light / Dark',
     githubLink: 'https://github.com/geoochi/omarchy-theme-sync',
     qt: true,
+    agent: true,
   },
   {
     video: assets.VideoFormulaFormatter,
@@ -111,13 +115,19 @@ const demos: Demo[] = [
   },
 ]
 
-const LogoCard: React.FC<{ src: string }> = ({ src }) => {
+const LogoCard: React.FC<{ src: string; title?: string }> = ({
+  src,
+  title = 'logo',
+}) => {
   return (
-    <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
+    <div
+      className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'
+      title={title}
+    >
       <img
         className='h-8 object-contain dark:filter dark:invert'
         src={src}
-        alt='logo'
+        alt={title}
         width={32}
         height={32}
       />
@@ -160,6 +170,9 @@ const CardGrid: React.FC = () => {
                 {demo.ffmpeg && <LogoCard src={assets.LogoFfmpeg} />}
                 {demo.go && <LogoCard src={assets.LogoGo} />}
                 {demo.qt && <LogoCard src={assets.LogoQt} />}
+                {demo.agent && (
+                  <LogoCard src={assets.LogoAgent} title='AI Agent' />
+                )}
               </div>
               <div className='flex flex-row justify-center gap-4 py-4'>
                 {demo.githubLink && (
