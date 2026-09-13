@@ -20,48 +20,43 @@ type Demo = {
   fastapi?: boolean
   opencv?: boolean
   ffmpeg?: boolean
+  qt?: boolean
 }
 
 const demos: Demo[] = [
   {
-    video: assets.VideoTrackfly,
-    heading: 'Track Fly Animation',
-    description: 'An track fly animation built by python & js',
-    githubLink: 'https://github.com/geoochi/track-fly',
-    websiteLink: 'https://geoochi.github.io/track-fly',
-    html: true,
-    javascript: true,
-    css: true,
-  },
-  {
-    video: assets.VideoCollisions,
-    heading: 'Collisions Render',
-    description: 'colliding blocks that compute pi (opencv version)',
-    githubLink: 'https://github.com/geoochi/collisions',
-    python: true,
-    opencv: true,
-    ffmpeg: true,
-  },
-  // {
-  //   video: assets.VideoDquery,
-  //   heading: 'Domain Duery',
-  //   description: 'a fast site to query date and snapshot numbers of a domain',
-  //   websiteLink: 'https://dquery.site',
-  //   fastapi: true,
-  //   html: true,
-  //   javascript: true,
-  //   css: true,
-  // },
-  {
-    video: assets.VideoUltraQR,
-    heading: 'Ultrafast Qrcode',
+    image: assets.ImageLocalCtl,
+    heading: 'LocalCTL',
     description:
-      'a tool to encode a text or decode a qrcode image online, ultrafast',
-    websiteLink: 'https://ultraqr.codes',
-    githubLink: 'https://github.com/geoochi/ultraqr.codes',
+      'A macOS LaunchAgents control panel — Go + Vite + React web UI for launchctl (gui domain), shipped as a single binary',
+    githubLink: 'https://github.com/geoochi/localctl',
+    go: true,
+    react: true,
+  },
+  {
+    video: assets.VideoDoubaoAsr,
+    heading: 'Doubao ASR Dictation',
+    description:
+      'Hotkey dictation on Omarchy / Hyprland with Doubao ASR: press to talk, press again to stop, and the text is typed straight into the focused window',
+    githubLink: 'https://github.com/geoochi/omarchy-doubao-asr',
+    go: true,
+  },
+  {
+    video: assets.VideoThemeSync,
+    heading: 'Theme Sync',
+    description:
+      'Switch between a light and a dark Omarchy theme on a local-time schedule, with a bar button that cycles Auto / Light / Dark',
+    githubLink: 'https://github.com/geoochi/omarchy-theme-sync',
+    qt: true,
+  },
+  {
+    video: assets.VideoFormulaFormatter,
+    heading: 'Formula Formatter',
+    description: 'Format your loooooooooooog excel formula',
+    websiteLink: 'https://geoochi.github.io/formula-formatter',
+    githubLink: 'https://github.com/geoochi/formula-formatter',
     html: true,
-    javascript: true,
-    css: true,
+    python: true,
   },
   {
     video: assets.VideoStereoVerify,
@@ -75,13 +70,44 @@ const demos: Demo[] = [
     css: true,
   },
   {
-    video: assets.VideoFormulaFormatter,
-    heading: 'Formula Formatter',
-    description: 'Format your loooooooooooog excel formula',
-    websiteLink: 'https://geoochi.github.io/formula-formatter',
-    githubLink: 'https://github.com/geoochi/formula-formatter',
+    video: assets.VideoUltraQR,
+    heading: 'Ultrafast Qrcode',
+    description:
+      'a tool to encode a text or decode a qrcode image online, ultrafast',
+    websiteLink: 'https://ultraqr.codes',
+    githubLink: 'https://github.com/geoochi/ultraqr.codes',
     html: true,
+    javascript: true,
+    css: true,
+  },
+  // {
+  //   video: assets.VideoDquery,
+  //   heading: 'Domain Duery',
+  //   description: 'a fast site to query date and snapshot numbers of a domain',
+  //   websiteLink: 'https://dquery.site',
+  //   fastapi: true,
+  //   html: true,
+  //   javascript: true,
+  //   css: true,
+  // },
+  {
+    video: assets.VideoCollisions,
+    heading: 'Collisions Render',
+    description: 'colliding blocks that compute pi (opencv version)',
+    githubLink: 'https://github.com/geoochi/collisions',
     python: true,
+    opencv: true,
+    ffmpeg: true,
+  },
+  {
+    video: assets.VideoTrackfly,
+    heading: 'Track Fly Animation',
+    description: 'An track fly animation built by python & js',
+    githubLink: 'https://github.com/geoochi/track-fly',
+    websiteLink: 'https://geoochi.github.io/track-fly',
+    html: true,
+    javascript: true,
+    css: true,
   },
 ]
 
@@ -133,6 +159,7 @@ const CardGrid: React.FC = () => {
                 {demo.opencv && <LogoCard src={assets.LogoOpencv} />}
                 {demo.ffmpeg && <LogoCard src={assets.LogoFfmpeg} />}
                 {demo.go && <LogoCard src={assets.LogoGo} />}
+                {demo.qt && <LogoCard src={assets.LogoQt} />}
               </div>
               <div className='flex flex-row justify-center gap-4 py-4'>
                 {demo.githubLink && (

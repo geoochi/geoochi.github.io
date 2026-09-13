@@ -6,6 +6,9 @@ import VideoTrackfly from '@/assets/demos/track-fly.mp4'
 import VideoUltraQR from '@/assets/demos/ultraqr.codes.mp4'
 import VideoStereoVerify from '@/assets/demos/stereo-verify.mp4'
 import VideoFormulaFormatter from '@/assets/demos/formula-formatter.mp4'
+import VideoThemeSync from '@/assets/demos/omarchy-theme-sync.mp4'
+import VideoDoubaoAsr from '@/assets/demos/omarchy-doubao-asr.mp4'
+import ImageLocalCtl from '@/assets/demos/localctl.png'
 
 import LogoGithub from '@/assets/logo/github.svg'
 import LogoX from '@/assets/logo/x.svg'
@@ -21,6 +24,7 @@ import LogoPython from '@/assets/logo/python.svg'
 import LogoOpencv from '@/assets/logo/opencv.svg'
 import LogoFfmpeg from '@/assets/logo/ffmpeg.svg'
 import LogoGo from '@/assets/logo/go.svg'
+import LogoQt from '@/assets/logo/qt.svg'
 
 export default {
   ImageGeooChi,
@@ -30,6 +34,9 @@ export default {
   VideoUltraQR,
   VideoStereoVerify,
   VideoFormulaFormatter,
+  VideoThemeSync,
+  VideoDoubaoAsr,
+  ImageLocalCtl,
   LogoGithub,
   LogoX,
   LogoNextJS,
@@ -44,4 +51,5 @@ export default {
   LogoOpencv,
   LogoFfmpeg,
   LogoGo,
+  LogoQt,
 }
