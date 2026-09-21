@@ -21,10 +21,20 @@ type Demo = {
   opencv?: boolean
   ffmpeg?: boolean
   qt?: boolean
+  apple?: boolean
   agent?: boolean
 }
 
 const demos: Demo[] = [
+  {
+    video: assets.VideoBattery,
+    heading: 'Battctl',
+    description:
+      'Set a native macOS 27 charge limit from the CLI — pick a target, reboot once, and macOS holds the battery there. No daemon, no adapter toggling',
+    githubLink: 'https://github.com/geoochi/battery-macos-27',
+    apple: true,
+    agent: true,
+  },
   {
     image: assets.ImageLocalCtl,
     heading: 'LocalCTL',
@@ -170,6 +180,7 @@ const CardGrid: React.FC = () => {
                 {demo.ffmpeg && <LogoCard src={assets.LogoFfmpeg} />}
                 {demo.go && <LogoCard src={assets.LogoGo} />}
                 {demo.qt && <LogoCard src={assets.LogoQt} />}
+                {demo.apple && <LogoCard src={assets.LogoApple} />}
                 {demo.agent && (
                   <LogoCard src={assets.LogoAgent} title='AI Agent' />
                 )}

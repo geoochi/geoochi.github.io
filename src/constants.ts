@@ -9,6 +9,7 @@ import VideoFormulaFormatter from '@/assets/demos/formula-formatter.mp4'
 import VideoThemeSync from '@/assets/demos/omarchy-theme-sync.mp4'
 import VideoDoubaoAsr from '@/assets/demos/omarchy-doubao-asr.mp4'
 import ImageLocalCtl from '@/assets/demos/localctl.png'
+import VideoBattery from '@/assets/demos/battery-macos-27.mp4'
 
 import LogoGithub from '@/assets/logo/github.svg'
 import LogoX from '@/assets/logo/x.svg'
@@ -26,6 +27,7 @@ import LogoFfmpeg from '@/assets/logo/ffmpeg.svg'
 import LogoGo from '@/assets/logo/go.svg'
 import LogoQt from '@/assets/logo/qt.svg'
 import LogoAgent from '@/assets/logo/agent.svg'
+import LogoApple from '@/assets/logo/apple.svg'
 
 export default {
   ImageGeooChi,
@@ -38,6 +40,7 @@ export default {
   VideoThemeSync,
   VideoDoubaoAsr,
   ImageLocalCtl,
+  VideoBattery,
   LogoGithub,
   LogoX,
   LogoNextJS,
@@ -54,4 +57,5 @@ export default {
   LogoGo,
   LogoQt,
   LogoAgent,
+  LogoApple,
 }
